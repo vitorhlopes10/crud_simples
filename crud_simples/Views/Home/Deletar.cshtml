@@ -1,0 +1,30 @@
+﻿@model crud_simples.Models.Cliente
+
+@{
+    ViewData["Title"] = "Deletar";
+}
+
+<h2>Atenção!</h2>
+
+<h4>Tem certeza que deseja excluir esse cliente?</h4>
+
+<div>
+    <hr />
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.cpf):
+            @Html.DisplayFor(model => model.cpf)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.nome):
+            @Html.DisplayFor(model => model.nome)
+        </dt>
+    </dl>
+
+    <form asp-action="Deletar">
+        <input type="hidden" asp-for="id" />
+        <input type="submit" value="Deletar" class="btn btn-danger" />
+        <a class="btn btn-default" asp-action="Index">Voltar</a>
+    </form>
+</div>
+
